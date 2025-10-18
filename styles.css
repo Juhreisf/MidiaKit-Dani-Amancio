@@ -87,7 +87,7 @@ body {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
     border: 3px solid var(--primary-red);
     position: relative;
     z-index: 2;
@@ -213,38 +213,6 @@ h1 {
     50% {
         top: 20px;
         opacity: 0.3;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 100px 40px;
-        height: auto;
-        min-height: 80vh;
-        background-attachment: scroll;
-    }
-
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .hero-image-container::before {
-        width: 220px;
-        height: 220px;
-    }
-
-    .hero-text {
-        order: -1;
-    }
-
-    .scroll-indicator {
-        display: none;
     }
 }
 
@@ -500,226 +468,8 @@ section {
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.placeholder-text {
-    color: var(--gray-light);
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--white);
-    border: none;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.carousel-nav:hover {
-    background: var(--primary-red);
-}
-
-.carousel-nav.prev {
-    left: 0;
-}
-
-.carousel-nav.next {
-    right: 0;
-}
-
-.carousel-dots {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.dot.active {
-    background: var(--primary-red);
-    transform: scale(1.2);
-}
-
-
-/* EP Section */
-.ep-section {
-    background: linear-gradient(135deg, var(--gray-dark) 0%, rgba(51, 51, 51, 0.8) 50%, var(--gray-dark) 100%);
-    padding: 6rem 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.ep-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(200, 200, 210, 0.2) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.ep-section::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--primary-red), transparent 70%);
-    opacity: 0.08;
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.ep-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-    margin-top: 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.ep-info h3 {
-    font-size: 2.5rem;
-    color: var(--primary-red);
-    margin-bottom: 2rem;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.ep-info p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: var(--gray-light);
-}
-
-.tracklist {
-    margin-top: 3rem;
-}
-
-.tracklist h4 {
-    color: var(--primary-red);
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-}
-
-.track {
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.track:hover {
-    padding-left: 1rem;
-    border-left: 3px solid var(--primary-red);
-}
-
-.track-name {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--white);
-}
-
-.track-credits {
-    font-size: 0.9rem;
-    color: var(--gray-light);
-    margin-top: 0.3rem;
-}
-
-.track-platforms {
-    display: flex;
-    gap: 0.8rem;
-    margin-top: 0.8rem;
-    flex-wrap: wrap;
-}
-
-.platform-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--white);
-    text-decoration: none;
-    font-size: 0.85rem;
-    border-radius: 2px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-}
-
-.platform-link:hover {
-    background: var(--primary-red);
-    border-color: var(--primary-red);
-    transform: translateY(-2px);
-}
-
-.platform-icon {
-    width: 16px;
-    height: 16px;
-}
-
-/* Carousel */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.carousel {
-    position: relative;
-    height: 600px;
-    overflow: hidden;
-    border-radius: 2px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.6s ease;
+    object-fit: contain;
     background: var(--gray-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-slide.active {
-    opacity: 1;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .placeholder-text {
@@ -872,7 +622,6 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.0;
-    ;
 }
 
 .highlight-card h3 {
@@ -903,7 +652,8 @@ section {
 .highlight-image-area img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .highlight-click-indicator {
@@ -1144,8 +894,61 @@ footer {
     font-size: 0.85rem;
 }
 
-/* Responsive */
+/* ============== MEDIA QUERIES ============== */
+
+/* Desktop Grande (1025px+) - Sem alterações necessárias, usa os padrões */
+
+/* Tablet Grande (769px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .ep-content {
+        gap: 3rem;
+    }
+
+    .highlights-grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet Pequeno (601px - 768px) */
 @media (max-width: 768px) {
+    .hero {
+        padding: 100px 40px;
+        height: auto;
+        min-height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-image-container::before {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-text {
+        order: -1;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
     .about {
         padding: 4rem 0;
     }
@@ -1205,9 +1008,6 @@ footer {
         padding: 0.9rem 2rem;
         font-size: 0.95rem;
     }
-}
-
-@media (max-width: 968px) {
 
     .contact-section>p:first-of-type,
     .contact-btn,
@@ -1228,20 +1028,26 @@ footer {
     }
 }
 
+/* Celulares Grandes (481px - 600px) */
 @media (max-width: 600px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .hero {
-        height: 50vh;
-        padding: 20px 16px;
+        height: auto;
+        min-height: 70vh;
+        padding: 80px 24px;
     }
 
     .hero-image-container::before {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
     }
 
     .profile-image {
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: 180px;
     }
 
     .about {
@@ -1280,6 +1086,10 @@ footer {
         line-height: 1.5;
     }
 
+    .section-title {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
     .ep-section {
         padding: 4rem 0;
     }
@@ -1300,12 +1110,30 @@ footer {
         height: 300px;
     }
 
+    .carousel-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
     .highlights-grid {
         grid-template-columns: 1fr;
     }
 
     .highlight-card {
         min-height: 300px;
+    }
+
+    .highlight-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .highlight-card p {
+        font-size: 0.95rem;
+    }
+
+    .highlight-image-area {
+        height: 180px;
     }
 
     .credits-grid {
@@ -1318,5 +1146,524 @@ footer {
 
     section {
         padding: 3rem 0;
+    }
+}
+
+/* Celulares Pequenos (411px - 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 70vh;
+        padding: 70px 20px;
+        gap: 20px;
+    }
+
+    .hero-content {
+        gap: 20px;
+    }
+
+    .hero-image-container::before {
+        width: 170px;
+        height: 170px;
+    }
+
+    .profile-image {
+        width: 155px;
+        height: 155px;
+        border: 2px solid var(--primary-red);
+    }
+
+    h1 {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+        letter-spacing: 2px;
+    }
+
+    .subtitle-buttons {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .subtitle-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .about {
+        padding: 2.5rem 0;
+    }
+
+    .about-card {
+        padding: 1.3rem;
+        border-left: 2px solid var(--primary-red);
+    }
+
+    .about-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .paragrafo-destaque {
+        font-size: 0.95rem;
+        margin: 15px auto;
+        padding: 0 0.8rem;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: clamp(1.3rem, 3.5vw, 2rem);
+    }
+
+    .ep-section {
+        padding: 3rem 0;
+    }
+
+    .ep-info h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ep-info p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .tracklist {
+        margin-top: 2rem;
+    }
+
+    .tracklist h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .track {
+        padding: 0.8rem 0;
+    }
+
+    .track-name {
+        font-size: 0.95rem;
+    }
+
+    .track-credits {
+        font-size: 0.8rem;
+    }
+
+    .track-platforms {
+        gap: 0.6rem;
+    }
+
+    .platform-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    .carousel {
+        height: 280px;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .carousel-dots {
+        gap: 0.6rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .highlights {
+        padding: 2.5rem 0;
+    }
+
+    .highlights-grid {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .highlight-card {
+        min-height: 280px;
+        padding: 1.3rem;
+        border-top: 2px solid var(--primary-red);
+    }
+
+    .highlight-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .highlight-card p {
+        font-size: 0.9rem;
+    }
+
+    .highlight-image-area {
+        height: 150px;
+        margin-top: 0.8rem;
+    }
+
+    .highlight-click-indicator {
+        font-size: 0.7rem;
+        margin-top: 0.7rem;
+    }
+
+    .click-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .back-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .production-credits {
+        margin-top: 1.5rem;
+        padding: 1.2rem;
+    }
+
+    .production-credits h4 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .credits-grid {
+        gap: 0.8rem;
+    }
+
+    .credit-btn {
+        padding: 0.7rem;
+    }
+
+    .credit-name {
+        font-size: 0.9rem;
+    }
+
+    .credit-role {
+        font-size: 0.75rem;
+    }
+
+    .contact {
+        padding: 2.5rem 0;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .contact p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.85rem;
+    }
+
+    .social-links {
+        gap: 8px;
+        margin-top: 20px !important;
+    }
+
+    .social-btn {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* iPhone 15 e Celulares Compactos (até 390px) */
+@media (max-width: 390px) {
+    .container {
+        padding: 0 0.8rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 65vh;
+        padding: 60px 16px;
+        gap: 15px;
+    }
+
+    .hero-content {
+        gap: 15px;
+    }
+
+    .hero-image-container::before {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+        border: 2px solid var(--primary-red);
+        box-shadow: 0 0 20px rgba(219, 86, 110, 0.4), 0 10px 30px rgba(219, 86, 110, 0.2);
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 5.5vw, 2.3rem);
+        letter-spacing: -1px;
+        margin-bottom: 6px;
+    }
+
+    .subtitle {
+        font-size: clamp(0.7rem, 1.8vw, 0.95rem);
+        letter-spacing: 1.5px;
+    }
+
+    .subtitle-buttons {
+        gap: 6px;
+        margin-top: 10px;
+    }
+
+    .subtitle-btn {
+        padding: 6px 14px;
+        font-size: 0.7rem;
+        letter-spacing: 0.8px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .about {
+        padding: 2rem 0;
+    }
+
+    .about-grid {
+        gap: 1.2rem;
+        margin-top: 1.2rem;
+    }
+
+    .about-card {
+        padding: 1.2rem;
+        border-left: 2px solid var(--primary-red);
+    }
+
+    .about-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .about-card p {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+
+    .paragrafo-destaque {
+        font-size: 0.9rem;
+        margin: 15px auto;
+        padding: 0 0.5rem;
+        line-height: 1.45;
+    }
+
+    .section-title {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .ep-section {
+        padding: 2.5rem 0;
+    }
+
+    .ep-content {
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .ep-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .ep-info p {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .tracklist {
+        margin-top: 1.5rem;
+    }
+
+    .tracklist h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .track {
+        padding: 0.7rem 0;
+    }
+
+    .track-name {
+        font-size: 0.9rem;
+    }
+
+    .track-credits {
+        font-size: 0.75rem;
+    }
+
+    .track-platforms {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .platform-link {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.65rem;
+    }
+
+    .carousel {
+        height: 250px;
+    }
+
+    .carousel-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .carousel-dots {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .dot {
+        width: 9px;
+        height: 9px;
+    }
+
+    .highlights {
+        padding: 2rem 0;
+    }
+
+    .highlights-grid {
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+    }
+
+    .highlight-card {
+        min-height: 260px;
+        padding: 1.2rem;
+        border-top: 2px solid var(--primary-red);
+    }
+
+    .highlight-card h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .highlight-card p {
+        font-size: 0.85rem;
+    }
+
+    .highlight-image-area {
+        height: 130px;
+        margin-top: 0.6rem;
+    }
+
+    .highlight-click-indicator {
+        font-size: 0.65rem;
+        margin-top: 0.6rem;
+    }
+
+    .click-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .back-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.75rem;
+    }
+
+    .production-credits {
+        margin-top: 1.2rem;
+        padding: 1rem;
+    }
+
+    .production-credits h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .credits-grid {
+        gap: 0.6rem;
+    }
+
+    .credit-btn {
+        padding: 0.6rem;
+    }
+
+    .credit-name {
+        font-size: 0.85rem;
+    }
+
+    .credit-role {
+        font-size: 0.7rem;
+    }
+
+    .contact {
+        padding: 2rem 0;
+    }
+
+    .contact h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .social-links {
+        gap: 6px;
+        margin-top: 15px !important;
+    }
+
+    .social-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        width: 100%;
+        gap: 5px;
+    }
+
+    footer {
+        padding: 12px 0.8rem;
+        font-size: 0.7rem;
     }
 }
