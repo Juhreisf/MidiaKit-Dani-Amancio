@@ -1107,18 +1107,29 @@ footer {
     .carousel-container {
         max-width: 100%;
         position: relative;
-        z-index: 10;
     }
 
     .carousel {
         height: 300px;
+        position: relative;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+    }
+
+    .carousel {
+        height: 280px;
     }
 
     .carousel-nav {
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
         width: 45px;
         height: 45px;
         font-size: 1.3rem;
-        z-index: 5;
+        z-index: 10;
     }
 
     .highlights-grid {
@@ -1278,19 +1289,18 @@ footer {
         font-size: 0.7rem;
     }
 
-    .carousel-container {
-        max-width: 100%;
-    }
-
     .carousel {
         height: 280px;
     }
 
     .carousel-nav {
+        position: absolute;
+        top: 35%;
+        transform: translateY(-50%);
         width: 40px;
         height: 40px;
         font-size: 1.1rem;
-        z-index: 5;
+        z-index: 10;
     }
 
     .carousel-dots {
@@ -1556,7 +1566,7 @@ footer {
         width: 38px;
         height: 38px;
         font-size: 1rem;
-        z-index: 5;
+        z-index: 9999;
     }
 
     .carousel-dots {
