@@ -218,9 +218,9 @@ h1 {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 130px 40px;
+        padding: 100px 40px;
         height: auto;
-        min-height: 60vh;
+        min-height: 80vh;
         background-attachment: scroll;
     }
 
