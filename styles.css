@@ -28,6 +28,7 @@ body {
 }
 
 /* HERO SECTION - REDUZIDO */
+
 .hero {
     position: relative;
     height: 60vh;
@@ -36,7 +37,7 @@ body {
     justify-content: space-between;
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--black) 100%);
     overflow: hidden;
-    padding: 40px 30px;
+    padding: 80px 30px;
     gap: 40px;
     background-attachment: fixed;
 }
@@ -217,10 +218,9 @@ h1 {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 20px 16px;
-        gap: 20px;
+        padding: 130px 40px;
         height: auto;
-        min-height: auto;
+        min-height: 60vh;
         background-attachment: scroll;
     }
 
