@@ -9,11 +9,6 @@ dados-pessoais.txt
 contatos.txt
 senhas.txt
 
-# Imagens Originais em Alta Resolução
-images/originais/
-fotos-originais/
-
-
 # Arquivos do Sistema Operacional
 .DS_Store
 Thumbs.db
@@ -46,6 +41,3 @@ yarn.lock
 temp/
 tmp/
 
-# Arquivos de teste
-test-images/
-rascunhos/
