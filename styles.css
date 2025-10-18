@@ -87,7 +87,7 @@ body {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    object-fit: contain;
+    object-fit: cover;
     border: 3px solid var(--primary-red);
     position: relative;
     z-index: 2;
@@ -1137,7 +1137,8 @@ footer {
     }
 
     .credits-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
 
     .production-credits {
