@@ -17,6 +17,7 @@ Já dividiu composições com grandes nomes do samba como Helder Celso (Grupo P�
 **Produção:** Andy Pandeiro e Indio Percussão | **Arranjos:** David Pereira
 
 Disponível em:
+- [MEDIA KIT](https://midia-kit-dani-amancio.vercel.app/).
 
 - [Spotify](https://open.spotify.com/intl-pt/artist/3Idv6TEKnwozxNbLk3epZ3)
 - [Apple Music](https://music.apple.com/br/album/contramão-ep/1844442035)
