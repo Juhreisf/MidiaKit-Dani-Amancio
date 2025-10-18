@@ -446,7 +446,9 @@ section {
     height: 600px;
     overflow: hidden;
     border-radius: 2px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 0 0 80px rgba(219, 86, 110, 0.15),
+        0 0 40px rgba(219, 86, 110, 0.2);
 }
 
 .carousel-slide {
@@ -1104,6 +1106,8 @@ footer {
 
     .carousel-container {
         max-width: 100%;
+        position: relative;
+        z-index: 10;
     }
 
     .carousel {
@@ -1111,17 +1115,9 @@ footer {
     }
 
     .carousel-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0, 0, 0, 0.5);
-        color: var(--white);
-        border: none;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
         z-index: 5;
     }
 
@@ -1294,6 +1290,7 @@ footer {
         width: 40px;
         height: 40px;
         font-size: 1.1rem;
+        z-index: 5;
     }
 
     .carousel-dots {
@@ -1559,6 +1556,7 @@ footer {
         width: 38px;
         height: 38px;
         font-size: 1rem;
+        z-index: 5;
     }
 
     .carousel-dots {
