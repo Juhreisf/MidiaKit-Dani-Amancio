@@ -10,7 +10,7 @@ Este é meu **primeiro projeto profissional** — um media kit digital desenvolv
 
 O projeto combina design elegante com funcionalidades interativas, criando uma experiência imersiva que reflete a essência e a personalidade artística de Dani.
 
-**🔗 [Ver projeto online](seu-link-vercel-aqui.vercel.app)**
+**🔗 [Ver projeto online](https://midia-kit-dani-amancio.vercel.app/)**
 
 ---
 
