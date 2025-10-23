@@ -82,10 +82,7 @@ media-kit-dani-amancio/
 
 ## 🚀 Como Usar
 
-### Acesso Online
-
-O site está hospedado no Vercel e pode ser acessado através do link:
-**[seu-link.vercel.app](https://midia-kit-dani-amancio.vercel.app/)**
+git
 
 ### Rodar Localmente
 
